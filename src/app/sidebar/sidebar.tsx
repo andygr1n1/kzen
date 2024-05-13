@@ -1,10 +1,10 @@
-import { cn } from '@/utils/cn'
 import { Menu } from './menu/menu'
+import { User } from './user/user'
 
 export const Sidebar = () => {
     return (
         <>
-            {/* <UserInfo /> */}
+            <User />
             <Menu />
         </>
     )

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { APP_ROUTES_ENUM } from '@/interfaces/enums'
 import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/utils/cn'
+import { cn } from '@/lib/utils'
 export const MenuLink: React.FC<{
     title?: string
     icon?: ReactNode
@@ -21,8 +21,8 @@ export const MenuLink: React.FC<{
             href={`/${to}`}
             className={cn(
                 buttonVariants({ variant: null }),
-                'flex gap-2 items-center !justify-start !w-full text-slate-400',
-                pathname === linkPath && 'text-primary font-bold'
+                'flex gap-2 items-center !justify-start !w-full text-slate-400 hover:text-white duration-300',
+                pathname === linkPath && 'text-primary font-bold hover:text-primary'
             )}
         >
             {icon}
